@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Result | ExamPro</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            text-align: center;
+            padding-top: 100px;
+            margin: 0;
+        }
+
+        .result {
+            background: white;
+            width: 500px;
+            max-width: 80%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #6c4ce6;
+        }
+
+        .score {
+            font-size: 45px;
+            color: #6c4ce6;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .percentage {
+            font-size: 20px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #6c4ce6;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="result">
+
+        <div style="font-size:60px;">
+            🎉
+        </div>
+
+        <h1>
+            Exam Completed!
+        </h1>
+
+        <p id="studentMessage">
+            Congratulations! You have successfully completed the examination.
+        </p>
+
+        <h2>
+            Your Score
+        </h2>
+
+        <div class="score">
+
+            <span id="score">0</span>
+            /
+            <span id="total">20</span>
+
+        </div>
+
+
+        <div class="percentage">
+
+            Score:
+            <span id="percentage">0%</span>
+
+        </div>
+
+
+        <a href="index.html">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+
+    <script>
+
+        // Get student name
+        const studentName = localStorage.getItem("studentName");
+
+        if (studentName) {
+            document.getElementById("studentMessage").textContent =
+                "Congratulations " + studentName +
+                "! You have successfully completed the examination.";
+        }
+
+
+        // Get score
+        const score = localStorage.getItem("examScore");
+
+        // Get total questions
+        const total = localStorage.getItem("examTotal");
+
+
+        if (score !== null) {
+            document.getElementById("score").textContent = score;
+        }
+
+
+        if (total !== null) {
+            document.getElementById("total").textContent = total;
+        }
+
+
+        // Calculate percentage
+        if (score !== null && total !== null) {
+
+            const percentage =
+                (Number(score) / Number(total)) * 100;
+
+            document.getElementById("percentage").textContent =
+                percentage.toFixed(0) + "%";
+        }
+
+    </script>
+
+</body>
+
+</html>

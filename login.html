@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login | ExamPro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-container">
+
+
+            <!-- LEFT SIDE -->
+            <div class="login-left">
+
+                <div class="login-logo">
+                    🎓
+                </div>
+
+                <h1>
+                    Welcome Back!
+                </h1>
+
+                <p>
+                    Login to continue your online examination.
+                    Test your knowledge and achieve your goals.
+                </p>
+
+
+                <div class="login-features">
+
+                    <div class="login-feature">
+                        <span class="login-feature-icon">✓</span>
+                        Easy Online Examination
+                    </div>
+
+                    <div class="login-feature">
+                        <span class="login-feature-icon">✓</span>
+                        Instant Result
+                    </div>
+
+                    <div class="login-feature">
+                        <span class="login-feature-icon">✓</span>
+                        Secure & Simple
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="login-right">
+
+                <div class="login-icon">
+                    👨‍🎓
+                </div>
+
+                <h2>
+                    Student Login
+                </h2>
+
+                <p class="login-subtitle">
+                    Enter your details to start the exam
+                </p>
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm" class="login-form">
+
+
+                    <!-- Student Name -->
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        name="studentName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <!-- Email -->
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <!-- Password -->
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-btn">
+
+                        Login & Continue 🚀
+
+                    </button>
+
+                </form>
+
+
+                <!-- Back Home -->
+                <a
+                    href="index.html"
+                    class="back-login">
+
+                    ← Back to Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Login JavaScript -->
+    <script>
+
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+
+                const studentName =
+                    document.getElementById("studentName").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+
+                // Save student details
+                localStorage.setItem(
+                    "studentName",
+                    studentName
+                );
+
+                localStorage.setItem(
+                    "studentEmail",
+                    email
+                );
+
+
+                // Go to instruction page
+                window.location.href =
+                    "instruction.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>

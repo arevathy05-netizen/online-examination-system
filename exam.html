@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Exam | ExamPro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Exam Header -->
+    <header class="exam-top">
+
+        <div class="exam-brand">
+            🎓 ExamPro
+        </div>
+
+        <div class="exam-name">
+            Online Examination
+        </div>
+
+        <div class="timer">
+            ⏱️ <span id="timer">30:00</span>
+        </div>
+
+    </header>
+
+
+    <!-- Exam Main Area -->
+    <main class="exam-container">
+
+        <!-- Progress -->
+        <div class="progress-area">
+
+            <div class="progress-text">
+
+                <span>Question</span>
+
+                <strong>
+                    <span id="currentQuestion">1</span> / 20
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress"
+                    id="progress">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question Card -->
+        <div class="question-card">
+
+            <div
+                class="question-number"
+                id="questionNumber">
+
+                Question 1
+
+            </div>
+
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+
+            <!-- Options -->
+            <div class="options">
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="answer"
+                        value="A">
+
+                    <span class="option-letter">
+                        A
+                    </span>
+
+                    <span id="optionA">
+                        Option A
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="answer"
+                        value="B">
+
+                    <span class="option-letter">
+                        B
+                    </span>
+
+                    <span id="optionB">
+                        Option B
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="answer"
+                        value="C">
+
+                    <span class="option-letter">
+                        C
+                    </span>
+
+                    <span id="optionC">
+                        Option C
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input
+                        type="radio"
+                        name="answer"
+                        value="D">
+
+                    <span class="option-letter">
+                        D
+                    </span>
+
+                    <span id="optionD">
+                        Option D
+                    </span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="exam-buttons">
+
+            <button
+                type="button"
+                id="previousBtn"
+                class="previous-btn">
+
+                ← Previous
+
+            </button>
+
+
+            <button
+                type="button"
+                id="nextBtn"
+                class="next-btn">
+
+                Next →
+
+            </button>
+
+
+            <button
+                type="button"
+                id="submitBtn"
+                class="submit-btn">
+
+                Submit Exam ✓
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
